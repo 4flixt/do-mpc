@@ -1,0 +1,6 @@
+# uncertain parameters
+def p_fun(t_now):
+    p_struct_sim['alpha'] = 0.95 + 0.1*np.random.rand()
+    p_struct_sim['beta'] = 0.9 + 0.2*np.random.rand()
+    
+    return p_struct_sim
