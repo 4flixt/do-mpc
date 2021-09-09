@@ -1,0 +1,13 @@
+setup_mpc = {
+    'n_horizon': 20,
+    't_step': 0.005,
+    'state_discretization': 'collocation',
+    'collocation_type': 'radau',
+    'collocation_deg': 2,
+    'collocation_ni': 2,
+    'store_full_solution': True,
+    # Use MA27 linear solver in ipopt for faster calculations:
+    'nlpsol_opts': {'ipopt.linear_solver': 'MA27'}
+}
+
+mpc.set_param(**setup_mpc)

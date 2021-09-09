@@ -1,0 +1,3 @@
+# Time-varying parameters:
+T_in = model.set_variable(var_type='_tvp', var_name='T_in')
+C_b_set = model.set_variable(var_type='_tvp', var_name='C_b_set')

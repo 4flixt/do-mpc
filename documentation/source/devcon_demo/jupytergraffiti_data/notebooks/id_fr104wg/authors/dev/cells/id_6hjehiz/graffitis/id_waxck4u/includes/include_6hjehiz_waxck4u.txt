@@ -1,0 +1,3 @@
+# Uncertain parameters:
+alpha = model.set_variable(var_type='_p', var_name='alpha')
+beta = model.set_variable(var_type='_p', var_name='beta')

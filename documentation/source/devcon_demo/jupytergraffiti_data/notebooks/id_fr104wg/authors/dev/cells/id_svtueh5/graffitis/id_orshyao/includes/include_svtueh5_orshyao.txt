@@ -1,0 +1,4 @@
+mpc.scaling['_x', 'T_R'] = 100
+mpc.scaling['_x', 'T_K'] = 100
+mpc.scaling['_u', 'Q_dot'] = 2000
+mpc.scaling['_u', 'F'] = 100

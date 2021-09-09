@@ -1,0 +1,2 @@
+model_type = 'continuous' # either 'discrete' or 'continuous'
+model = do_mpc.model.Model(model_type)

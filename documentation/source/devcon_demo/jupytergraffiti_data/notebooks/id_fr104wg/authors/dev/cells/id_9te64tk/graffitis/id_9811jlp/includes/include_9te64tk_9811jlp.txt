@@ -1,0 +1,18 @@
+# lower bounds of the states
+mpc.bounds['lower', '_x', 'C_a'] = 0.1
+mpc.bounds['lower', '_x', 'C_b'] = 0.1
+mpc.bounds['lower', '_x', 'T_R'] = 50
+mpc.bounds['lower', '_x', 'T_K'] = 50
+
+# upper bounds of the states
+mpc.bounds['upper', '_x', 'C_a'] = 2
+mpc.bounds['upper', '_x', 'C_b'] = 2
+mpc.bounds['upper', '_x', 'T_K'] = 140
+
+# lower bounds of the inputs
+mpc.bounds['lower', '_u', 'F'] = 5
+mpc.bounds['lower', '_u', 'Q_dot'] = -8500
+
+# upper bounds of the inputs
+mpc.bounds['upper', '_u', 'F'] = 100
+mpc.bounds['upper', '_u', 'Q_dot'] = 0.0

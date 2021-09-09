@@ -1,0 +1,11 @@
+# function for time-varying parameters
+tvp_struct_sim['T_in'] = 130
+
+def tvp_fun(t_now):
+    return tvp_struct_sim
+
+# uncertain parameters
+p_struct_sim['alpha'] = 1
+p_struct_sim['beta'] = 1
+def p_fun(t_now):
+    return p_struct_sim

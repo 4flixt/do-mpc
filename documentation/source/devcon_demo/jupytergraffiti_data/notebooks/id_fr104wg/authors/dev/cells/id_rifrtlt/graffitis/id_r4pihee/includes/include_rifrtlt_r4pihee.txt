@@ -1,0 +1,7 @@
+def tvp_fun_mpc(t_now):
+    if t_now <= 0.1:
+        tvp_struct_mpc['_tvp',:,'C_b_set'] = 0.6
+    else:
+        tvp_struct_mpc['_tvp',:,'C_b_set'] = 0.5
+        
+    return tvp_struct_mpc

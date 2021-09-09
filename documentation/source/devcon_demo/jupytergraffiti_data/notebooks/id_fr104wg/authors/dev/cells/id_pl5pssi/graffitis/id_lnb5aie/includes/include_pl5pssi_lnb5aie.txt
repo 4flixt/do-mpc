@@ -1,0 +1,29 @@
+fig, ax = plt.subplots(5, sharex=True, figsize=(9,7))
+# Configure plot:
+mpc_graphics.add_line(var_type='_x', var_name='C_a', axis=ax[0], label='C_a')
+mpc_graphics.add_line(var_type='_x', var_name='C_b', axis=ax[0], linewidth=3)
+mpc_graphics.add_line(var_type='_tvp', var_name='C_b_set', axis=ax[0], color='k')
+mpc_graphics.add_line(var_type='_x', var_name='T_R', axis=ax[1])
+mpc_graphics.add_line(var_type='_x', var_name='T_K', axis=ax[1])
+mpc_graphics.add_line(var_type='_tvp', var_name='T_in', axis=ax[2])
+mpc_graphics.add_line(var_type='_u', var_name='Q_dot', axis=ax[3])
+mpc_graphics.add_line(var_type='_u', var_name='F', axis=ax[4])
+ax[0].set_ylabel('c [mol/l]')
+ax[1].set_ylabel('T [K]')
+ax[2].set_ylabel('T_in [K]')
+ax[3].set_ylabel('Q [kW]')
+ax[4].set_ylabel('Flow [l/h]')
+ax[4].set_xlabel('time [h]')
+
+# Add labels
+ax[0].legend()
+label_lines = []
+label_lines += mpc_graphics.result_lines['_x', 'C_a']
+label_lines += mpc_graphics.result_lines['_x', 'C_b']
+label_lines += mpc_graphics.result_lines['_tvp', 'C_b_set']
+
+ax[0].legend(label_lines, ['C_a', 'C_b', 'C_b_set'])
+label_lines = mpc_graphics.result_lines['_x', 'T_R']+mpc_graphics.result_lines['_x', 'T_K']
+ax[1].legend(label_lines, ['T_R', 'T_K'])
+
+fig.align_ylabels()

@@ -1,0 +1,1 @@
+tvp_struct_mpc = mpc.get_tvp_template()

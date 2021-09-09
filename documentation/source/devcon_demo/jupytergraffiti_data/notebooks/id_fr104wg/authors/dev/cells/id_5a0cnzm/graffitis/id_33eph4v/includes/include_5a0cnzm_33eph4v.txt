@@ -1,0 +1,6 @@
+mterm = (model.x['C_b'] - model.tvp['C_b_set'])**2 # terminal cost
+lterm = (model.x['C_b'] - model.tvp['C_b_set'])**2 # stage cost
+
+mpc.set_objective(mterm=mterm, lterm=lterm)
+
+mpc.set_rterm(F=0.1, Q_dot = 1e-3) # input penalty

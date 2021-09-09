@@ -1,0 +1,1 @@
+mpc = do_mpc.controller.MPC(model)

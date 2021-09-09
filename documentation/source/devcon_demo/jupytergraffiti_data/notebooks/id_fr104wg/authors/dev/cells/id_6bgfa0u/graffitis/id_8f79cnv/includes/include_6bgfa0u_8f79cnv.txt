@@ -1,0 +1,5 @@
+# States struct (optimization variables):
+C_a = model.set_variable(var_type='_x', var_name='C_a', shape=(1,1))
+C_b = model.set_variable(var_type='_x', var_name='C_b', shape=(1,1))
+T_R = model.set_variable(var_type='_x', var_name='T_R', shape=(1,1))
+T_K = model.set_variable(var_type='_x', var_name='T_K', shape=(1,1))

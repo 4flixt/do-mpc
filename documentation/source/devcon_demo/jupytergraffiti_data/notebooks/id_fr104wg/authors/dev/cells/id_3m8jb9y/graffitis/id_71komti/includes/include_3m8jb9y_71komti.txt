@@ -1,0 +1,1 @@
+T_dif = model.set_expression(expr_name='T_dif', expr=T_R-T_K)
