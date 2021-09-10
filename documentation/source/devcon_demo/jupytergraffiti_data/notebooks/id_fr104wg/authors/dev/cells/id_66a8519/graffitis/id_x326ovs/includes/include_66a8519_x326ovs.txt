@@ -1,0 +1,11 @@
+t_switch = 0.1
+
+def tvp_fun_mpc(t_now):
+    switch_ind = int((t_switch-t_now)/mpc.t_step)
+    switch_ind = max(switch_ind, 0)
+    switch_ind = min(switch_ind,mpc.n_horizon)
+    
+    tvp_struct_mpc['_tvp',:switch_ind,'C_b_set'] = 0.6
+    tvp_struct_mpc['_tvp',switch_ind:,'C_b_set'] = 0.5
+        
+    return tvp_struct_mpc
